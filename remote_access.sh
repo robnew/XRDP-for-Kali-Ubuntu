@@ -11,10 +11,11 @@ sudo mv /etc/xrdp/startwm.sh /etc/xrdp/startwm.sh.orig
 
 # Copy new new startwm.sh file that wil load XFCE4 when connecting via RDP
 cp  startwm.sh /etc/xrdp/startwm.sh
+chmod a+rwx /etc/xrdp/startwm.sh
 
 # Enable thre XRDP service
 systemctl enable xrdp
 
 # Start the XRDP service
-service xrdp start
+systrmctl restart xrdp
 
